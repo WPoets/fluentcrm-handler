@@ -24,7 +24,7 @@ function contact_add($atts, $content = null, $shortcode=null){
 			$temp_debug['error_type']='plugin_error';
 			\aw2\live_debug\publish_event(['event'=>$temp_debug,'bgcolor'=>'#FFC3C3']);
 		}
-        throw new Exception('FluentCRM is not active.');
+        throw new \Exception('FluentCRM is not active.');
     }
         
 
@@ -39,7 +39,7 @@ function contact_add($atts, $content = null, $shortcode=null){
 			$temp_debug['error_type']='json_fail';
 			\aw2\live_debug\publish_event(['event'=>$temp_debug,'bgcolor'=>'#FFC3C3']);
 		}
-        throw new Exception('Issue with JSON data.');
+        throw new \Exception('Issue with JSON data.');
     }
 
     $contactApi = FluentCrmApi('contacts');
